@@ -26,7 +26,7 @@ def get_db_connection():
 def fetch_data():
     conn = get_db_connection()
     cursor = conn.cursor(dictionary=True)  # Get results as dictionaries
-    cursor.execute("SELECT * FROM test_table")  # Replace 'your_table_name' with the actual table name
+    cursor.execute("SELECT age FROM test_table")  # Replace 'your_table_name' with the actual table name
     rows = cursor.fetchall()
     cursor.close()
     conn.close()
